@@ -1,0 +1,12 @@
+name: Rubocop Linter for PRs
+description: A GitHub Action that lints your Ruby PRs with Rubocop
+inputs:
+  changes-only:
+    description: Lint changed files only
+    required: false
+    default: true
+runs:
+  using: docker
+  image: docker://docker.pkg.github.com/alexanderzagaynov/rubocop-action/rubocop-action:0.0.1
+  args:
+    - ${{ inputs.changes-only }}
