@@ -7,6 +7,6 @@ inputs:
     default: true
 runs:
   using: docker
-  image: docker://docker.pkg.github.com/alexanderzagaynov/rubocop-action/rubocop-action:0.0.1
+  image: docker://zalex80/rubocop-action:latest
   args:
     - ${{ inputs.changes-only }}
