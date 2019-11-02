@@ -8,5 +8,3 @@ inputs:
 runs:
   using: docker
   image: docker://zalex80/rubocop-action:latest
-  args:
-    - ${{ inputs.changes-only }}
