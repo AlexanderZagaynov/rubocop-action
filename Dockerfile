@@ -24,7 +24,5 @@ RUN set -ex \
       rubocop-performance \
       rubocop-sequel
 
-WORKDIR /github/action
-COPY lib .
-
-ENTRYPOINT ["ruby", "rubocop.rb"]
+COPY lib /github/action/
+ENTRYPOINT ["ruby", "/github/action/rubocop.rb"]
